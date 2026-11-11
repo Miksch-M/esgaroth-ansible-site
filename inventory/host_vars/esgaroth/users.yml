@@ -1,0 +1,8 @@
+# Uživatelé na serveru esgaroth
+
+# název mého uživatele
+admin_user: marek
+
+admin_user_ssh_keys:
+  - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDpiNV25jzSoN7sW4XGlCJ99ZgryHxr8dG0D3+AgToP7 andro@LAPTOP-H0343U86"
+  - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHmOozkjyjpU12m76Nf6l8iBQLZJObVKM9zwIhwnyaqN marek@skolni-pc"

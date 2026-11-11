@@ -1,0 +1,19 @@
+- name: Správa uživatele a jeho SSH klíčů
+  hosts: esgaroth
+  become: true
+
+  tasks:
+    - name: Uživatel existuje a je ve skupině wheel
+      ansible.builtin.user:
+        name: "{{ admin_user }}"
+        groups: wheel
+        append: true
+        update_password: on_create
+        state: present
+
+    - name: Autorizované SSH klíče 
+      ansible.posix.authorized_key:
+        user: "{{ admin_user }}"
+        key: "{{ admin_user_ssh_keys | join('\n') }}"
+        exclusive: true
+        state: present
